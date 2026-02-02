@@ -8,9 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
-import ru.stroy1click.auth.model.Role;
-
-import java.io.Serializable;
 
 @Data
 @AllArgsConstructor

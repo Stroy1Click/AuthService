@@ -2,9 +2,9 @@ package ru.stroy1click.auth.service;
 
 
 
-import ru.stroy1click.auth.model.JwtResponse;
+import ru.stroy1click.auth.dto.JwtResponse;
 import ru.stroy1click.auth.entity.RefreshToken;
-import ru.stroy1click.auth.model.RefreshTokenRequest;
+import ru.stroy1click.auth.dto.RefreshTokenRequest;
 
 import java.util.Optional;
 

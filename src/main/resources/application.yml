@@ -24,11 +24,15 @@ spring:
     basename: messages
     encoding: UTF-8
 server:
-  port: 9090
+  port: 9070
+
 
 logging:
-  file:
-    path: logs
+  level:
+    org:
+      springframework:
+        security: DEBUG
+        web: DEBUG
 
 url:
   user: http://localhost:8080/api/v1/users
@@ -53,7 +57,7 @@ resilience4j:
     instances:
       authLimiter:
         limit-for-period: 30
-        limit-refresh-period: 1s
+        limit-refresh-period: 1
   circuitbreaker:
     instances:
       userClient:

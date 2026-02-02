@@ -10,12 +10,12 @@ spring:
     show-sql: true
     open-in-view: false
   datasource:
-    url: jdbc:postgresql://localhost:5433/stroy1click
+    url: jdbc:postgresql://localhost:5437/stroy1click
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
   flyway:
-    url: jdbc:postgresql://localhost:5433/stroy1click
+    url: jdbc:postgresql://localhost:5437/stroy1click
     user: postgres
     password: password
     baseline-on-migrate: true
@@ -23,7 +23,7 @@ spring:
     basename: messages
     encoding: UTF-8
 server:
-  port: 9090
+  port: 9070
 
 management:
   health:
