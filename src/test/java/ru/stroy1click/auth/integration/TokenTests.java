@@ -10,9 +10,9 @@ import org.springframework.http.*;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import ru.stroy1click.auth.client.UserClient;
 import ru.stroy1click.auth.dto.UserDto;
-import ru.stroy1click.auth.model.JwtResponse;
-import ru.stroy1click.auth.model.RefreshTokenRequest;
-import ru.stroy1click.auth.model.Role;
+import ru.stroy1click.auth.dto.JwtResponse;
+import ru.stroy1click.auth.dto.RefreshTokenRequest;
+import ru.stroy1click.auth.dto.Role;
 
 import static org.mockito.Mockito.when;
 

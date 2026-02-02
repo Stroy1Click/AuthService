@@ -1,4 +1,4 @@
-package ru.stroy1click.auth.model;
+package ru.stroy1click.auth.dto;
 
 public enum Role {
 

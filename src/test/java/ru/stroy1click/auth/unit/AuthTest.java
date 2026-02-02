@@ -11,8 +11,8 @@ import ru.stroy1click.auth.client.UserClient;
 import ru.stroy1click.auth.dto.UserDto;
 import ru.stroy1click.auth.exception.NotFoundException;
 import ru.stroy1click.auth.exception.ValidationException;
-import ru.stroy1click.auth.model.AuthRequest;
-import ru.stroy1click.auth.model.RefreshTokenRequest;
+import ru.stroy1click.auth.dto.AuthRequest;
+import ru.stroy1click.auth.dto.RefreshTokenRequest;
 import ru.stroy1click.auth.service.JwtService;
 import ru.stroy1click.auth.service.RefreshTokenService;
 import ru.stroy1click.auth.service.impl.AuthServiceImpl;
@@ -42,7 +42,6 @@ class AuthTest {
     @InjectMocks
     private AuthServiceImpl authService;
 
-    private Long userId;
     private UserDto userDto;
     private AuthRequest authRequest;
     private RefreshTokenRequest refreshTokenRequest;
