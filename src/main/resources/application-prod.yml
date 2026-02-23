@@ -36,6 +36,17 @@ management:
   endpoint:
     health:
       show-details: always
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      group-id: auth-service
+      properties:
+        spring.json.trusted.packages: ru.stroy1click.common.*
 
 url:
   user: http://localhost:8080/api/v1/users

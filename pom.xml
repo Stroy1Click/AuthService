@@ -40,6 +40,8 @@
         <resilience4j.version>2.3.0</resilience4j.version>
         <modelmapper.version>3.2.3</modelmapper.version>
         <otel.version>2.22.0</otel.version>
+        <common.version>0.0.1-SNAPSHOT</common.version>
+        <outbox.consumer.core.version>0.0.1-SNAPSHOT</outbox.consumer.core.version>
     </properties>
 
     <dependencies>
@@ -106,13 +108,13 @@
         <dependency>
             <groupId>ru.stroy1click</groupId>
             <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${common.version}</version>
         </dependency>
 
         <dependency>
             <groupId>ru.stroy1click</groupId>
             <artifactId>outbox-consumer-core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${outbox.consumer.core.version}</version>
         </dependency>
 
         <dependency>
