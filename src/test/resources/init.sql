@@ -8,10 +8,10 @@ create table if not exists auth.refresh_tokens(
 );
 
 
--- Test: TokenTests refreshToken()
+-- Test: TokenControllerIT refreshToken()
 -- Описание: обновление срока годности токена
 insert into auth.refresh_tokens(user_email, token, expiry_date) values ( 'mike_thompson@gmail.com', '40f2a44f-31ed-4593-97fe-ab775e309988','2000-09-10 09:01:43.728681');
 
--- Test: TokenTests refreshAccessToken()
+-- Test: TokenControllerIT refreshAccessToken()
 -- Описание: токен для обновления access token
 insert into auth.refresh_tokens(user_email, token, expiry_date)values ( 'mike_thompson@gmail.com', 'ba9a4691-ff6d-45eb-857f-1e39079ebd60','2077-09-10 09:01:43.728681');

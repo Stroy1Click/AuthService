@@ -7,11 +7,11 @@ import org.springframework.context.MessageSource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import ru.stroy1click.auth.exception.ValidationException;
 import ru.stroy1click.auth.dto.JwtResponse;
 import ru.stroy1click.auth.dto.RefreshTokenRequest;
 import ru.stroy1click.auth.service.RefreshTokenService;
-import ru.stroy1click.auth.util.ValidationErrorUtils;
+import ru.stroy1click.common.util.ValidationErrorUtils;
+import ru.stroy1click.common.exception.ValidationException;
 
 import java.util.Locale;
 

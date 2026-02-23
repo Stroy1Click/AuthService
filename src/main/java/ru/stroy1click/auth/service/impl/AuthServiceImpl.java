@@ -9,10 +9,10 @@ import ru.stroy1click.auth.client.UserClient;
 import ru.stroy1click.auth.dto.AuthRequest;
 import ru.stroy1click.auth.dto.RefreshTokenRequest;
 import ru.stroy1click.auth.dto.UserDto;
-import ru.stroy1click.auth.exception.ValidationException;
 import ru.stroy1click.auth.service.AuthService;
-import ru.stroy1click.auth.service.JwtService;
 import ru.stroy1click.auth.service.RefreshTokenService;
+import ru.stroy1click.common.exception.ValidationException;
+import ru.stroy1click.common.service.JwtService;
 
 import java.util.Locale;
 
@@ -41,9 +41,9 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public String generateToken(String email) {
         log.info("generate {}", email);
-        UserDto userDto = this.userClient.getByEmail(email);
+        UserDto user = this.userClient.getByEmail(email);
 
-        return this.jwtService.generate(userDto);
+        return this.jwtService.generate(user.getEmail(), user.getRole().toString(), user.getEmailConfirmed());
     }
 
     @Override

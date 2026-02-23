@@ -1,7 +1,7 @@
-package ru.stroy1click.auth.integration;
+package ru.stroy1click.auth;
 
 import org.springframework.boot.SpringApplication;
-import ru.stroy1click.auth.Stroy1ClickAuthServiceApplication;
+import ru.stroy1click.auth.config.TestcontainersConfiguration;
 
 public class TestStroy1ClickAuthServiceApplication {
 

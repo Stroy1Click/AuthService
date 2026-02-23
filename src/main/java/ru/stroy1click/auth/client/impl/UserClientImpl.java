@@ -9,8 +9,8 @@ import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestClient;
 import ru.stroy1click.auth.client.UserClient;
 import ru.stroy1click.auth.dto.UserDto;
-import ru.stroy1click.auth.exception.ServiceUnavailableException;
-import ru.stroy1click.auth.util.ValidationErrorUtils;
+import ru.stroy1click.common.util.ValidationErrorUtils;
+import ru.stroy1click.common.exception.ServiceUnavailableException;
 
 @Slf4j
 @Component
@@ -30,7 +30,7 @@ public class UserClientImpl implements UserClient {
         log.info("getByEmail {}", email);
         try {
             return this.restClient.get()
-                    .uri("/email?email={email}", email)
+                    .uri("?email={email}", email)
                     .retrieve()
                     .onStatus(HttpStatusCode::isError,(request, response) -> {
                         ValidationErrorUtils.validateStatus(response);

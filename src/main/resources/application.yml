@@ -23,16 +23,19 @@ spring:
   messages:
     basename: messages
     encoding: UTF-8
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      group-id: auth-service
+      properties:
+        spring.json.trusted.packages: ru.stroy1click.common.*
 server:
   port: 9070
-
-
-logging:
-  level:
-    org:
-      springframework:
-        security: DEBUG
-        web: DEBUG
 
 url:
   user: http://localhost:8080/api/v1/users
@@ -71,18 +74,5 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
 
 otel:
-  service:
-    name: "auth-service"
-  traces:
-    exporter: "otlp"
-    sampler: "always_on"
-  metrics:
-    exporter: "otlp"
-    export:
-      interval: 5000
-  logs:
-    exporter: "otlp"
-  exporter:
-    otlp:
-      protocol: "grpc"
-      endpoint: "http://localhost:4317"
+  sdk:
+    disabled: true

@@ -1,4 +1,4 @@
-package ru.stroy1click.auth.config;
+package ru.stroy1click.auth.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
