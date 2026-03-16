@@ -43,7 +43,7 @@ public class AuthServiceImpl implements AuthService {
         log.info("generate {}", email);
         UserDto user = this.userClient.getByEmail(email);
 
-        return this.jwtService.generate(user.getEmail(), user.getRole().toString(), user.getEmailConfirmed());
+        return this.jwtService.generate(user.getEmail(), user.getRole().toString(), user.getIsEmailConfirmed());
     }
 
     @Override

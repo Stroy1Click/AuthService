@@ -45,7 +45,7 @@ public class AuthControllerTest {
                 .lastName("Thompson")
                 .email("kate_thompson3@gmail.com")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -73,7 +73,7 @@ public class AuthControllerTest {
                 .lastName("Thompson")
                 .email("kate_thompson3@gmail.com")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -101,7 +101,7 @@ public class AuthControllerTest {
                 .lastName("Thompson")
                 .email("kate_thompson3@gmail.com")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -129,7 +129,7 @@ public class AuthControllerTest {
                 .lastName("")
                 .email("kate_thompson3@gmail.com")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -157,7 +157,7 @@ public class AuthControllerTest {
                 .lastName("T")
                 .email("kate_thompson3@gmail.com")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -185,7 +185,7 @@ public class AuthControllerTest {
                 .lastName("snjdgfjsdgnjksngjksdjfnsjadfnjsakfnjskdfbhsdfbhsdkfbhsdafhsadfhjsadbfhjsdf")
                 .email("kate_thompson3@gmail.com")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -212,7 +212,7 @@ public class AuthControllerTest {
                 .firstName("FirstName")
                 .lastName("Thompson")
                 .email("kate_thompson3@gmail.com")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -240,7 +240,7 @@ public class AuthControllerTest {
                 .lastName("Thompson")
                 .email("invalidemailgmail.com")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -268,7 +268,7 @@ public class AuthControllerTest {
                 .lastName("Thompson")
                 .email("@mai.ru")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -296,7 +296,7 @@ public class AuthControllerTest {
                 .lastName("Thompson")
                 .email("kate_thompson843954773458y34857y4357823495y23y58235y2358y235y352y5fhdfh81883838838383838381jj3@gmail.com")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -324,7 +324,7 @@ public class AuthControllerTest {
                 .lastName("Thompson")
                 .email("kate_thompson3@gmail.com")
                 .password("")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -352,7 +352,7 @@ public class AuthControllerTest {
                 .lastName("Thompson")
                 .email("kate_thompson3@gmail.com")
                 .password("p")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -380,7 +380,7 @@ public class AuthControllerTest {
                 .lastName("Thompson")
                 .email("kate_thompson3@gmail.com")
                 .password("password123983284234723586258764573745310457963419564571374059634573405916345712312334343")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build();
 
@@ -408,7 +408,7 @@ public class AuthControllerTest {
                 .lastName("Thompson")
                 .email("kate_thompson3@gmail.com")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .build();
 
         RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/api/v1/auth/registration")

@@ -35,7 +35,7 @@ class AuthControllerIT {
                 .lastName("Thompson")
                 .email("kate_thompson@gmail.com")
                 .password("password123")
-                .emailConfirmed(false)
+                .isEmailConfirmed(false)
                 .role(Role.ROLE_USER)
                 .build());
         when(this.userClient.create(httpEntity.getBody())).thenReturn(new UserDto());

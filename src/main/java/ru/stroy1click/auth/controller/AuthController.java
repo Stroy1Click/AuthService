@@ -40,7 +40,7 @@ public class AuthController {
                 ValidationErrorUtils.collectErrorsToString(bindingResult.getFieldErrors())
         );
 
-        userDto.setEmailConfirmed(false); //by default
+        userDto.setIsEmailConfirmed(false); //by default
 
         this.authService.createUser(userDto);
 

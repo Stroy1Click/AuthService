@@ -13,7 +13,7 @@ public class ExpiredRefreshTokensHandler {
 
     private final RefreshTokenService refreshTokenService;
 
-    @Scheduled(fixedDelay = 1000)
+    @Scheduled(fixedDelay = 300_000)
     public void handle(){
         this.refreshTokenService.deleteAllExpiredTokens();
     }

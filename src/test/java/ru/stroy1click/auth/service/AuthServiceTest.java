@@ -78,7 +78,7 @@ class AuthServiceTest {
     public void generateToken_WhenUserExists_ShouldGenerateToken() {
         //Arrange
         when(this.userClient.getByEmail(TEST_EMAIL)).thenReturn(userDto);
-        when(this.jwtService.generate(userDto.getEmail(), userDto.getRole().toString(), userDto.getEmailConfirmed()))
+        when(this.jwtService.generate(userDto.getEmail(), userDto.getRole().toString(), userDto.getIsEmailConfirmed()))
                 .thenReturn(GENERATED_TOKEN);
 
         //Act
@@ -87,7 +87,7 @@ class AuthServiceTest {
         //Assert
         assertEquals(GENERATED_TOKEN, token);
         verify(this.userClient).getByEmail(TEST_EMAIL);
-        verify(this.jwtService).generate(userDto.getEmail(), userDto.getRole().toString(), userDto.getEmailConfirmed());
+        verify(this.jwtService).generate(userDto.getEmail(), userDto.getRole().toString(), userDto.getIsEmailConfirmed());
     }
 
     @Test

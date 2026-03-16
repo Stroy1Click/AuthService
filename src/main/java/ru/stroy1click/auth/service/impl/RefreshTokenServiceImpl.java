@@ -123,7 +123,7 @@ public class RefreshTokenServiceImpl implements RefreshTokenService {
 
         return JwtResponse.builder()
                 .accessToken(this.jwtService.generate(userDto.getEmail(),
-                        userDto.getRole().toString(), userDto.getEmailConfirmed()))
+                        userDto.getRole().toString(), userDto.getIsEmailConfirmed()))
                 .refreshToken(refreshToken.getToken())
                 .build();
     }
