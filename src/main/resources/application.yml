@@ -34,6 +34,9 @@ spring:
       group-id: auth-service
       properties:
         spring.json.trusted.packages: ru.stroy1click.common.*
+  threads:
+    virtual:
+      enabled: true
 server:
   port: 9070
 

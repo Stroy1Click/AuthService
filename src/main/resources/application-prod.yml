@@ -47,6 +47,9 @@ management:
       group-id: auth-service
       properties:
         spring.json.trusted.packages: ru.stroy1click.common.*
+  threads:
+    virtual:
+      enabled: true
 
 url:
   user: http://localhost:8080/api/v1/users
